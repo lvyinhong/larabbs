@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTopicsTable extends Migration 
+class CreateTopicsTable extends Migration
 {
 	public function up()
 	{
@@ -25,6 +25,6 @@ class CreateTopicsTable extends Migration
 
 	public function down()
 	{
-		Schema::drop('topics');
+		Schema::dropIfExists('categories');
 	}
 }

@@ -29,7 +29,9 @@ class UsersTableSeeder extends Seeder
         $users = factory(User::class)
                 ->times(10)
                 ->make()
-                ->each(function($user, $index)use($faker, $avatars){
+                ->each(function($user, $index)
+                    use ($faker, $avatars)
+                {
                     // 从头像数组中随机去除一个饼赋值
                     $user->avatar = $faker->randomElement($avatars);
                 });

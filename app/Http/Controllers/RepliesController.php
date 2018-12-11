@@ -29,6 +29,6 @@ class RepliesController extends Controller
 		$this->authorize('destroy', $reply);
 		$reply->delete();
 
-		return redirect()->route('replies.index')->with('success', '删除成功！');
+		return redirect()->to($reply->link())->with('success', '成功删除回复！');
 	}
 }

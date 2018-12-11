@@ -15,6 +15,11 @@ class User extends Authenticatable
         $this->unreadNotifications->markAsRead();
     }
 
+    public function isAuthorOf($model)
+    {
+        return $this->id == $model->user_id;
+    }
+
     use Notifiable {
         notify as protected laravelNotify;
     }

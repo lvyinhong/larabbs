@@ -16,17 +16,20 @@
     @yield('styles')
 </head>
 <body>
-    <div id="app" class="{{ route_class() }}-page">
-        @include('layouts._header')
-        <div class="container">
-            @include('layouts._message')
-            @yield('content')
-        </div>
-        @include('layouts._footer')
+<div id="app" class="{{ route_class() }}-page">
+    @include('layouts._header')
+    <div class="container">
+        @include('layouts._message')
+        @yield('content')
     </div>
+    @include('layouts._footer')
+</div>
+@if(app()->isLocal())
+    @include('sudosu::user-selector')
+@endif
 
-    <!--script-->
-    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
-    @yield('scripts')
+<!--script-->
+<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+@yield('scripts')
 </body>
 </html>

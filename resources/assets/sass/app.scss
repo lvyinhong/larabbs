@@ -80,7 +80,6 @@ body {
             margin-bottom: 0;
         }
     }
-
     .nav-tabs {
         margin-bottom: 20px;
         >li.active > a {
@@ -98,7 +97,14 @@ body {
         }
     }
     .pagination {
-        magrin: 12px 0;
+        margin: 12px 0;
+    }
+    .meta {
+        font-size: .9em;
+        color: #b3b3b3;
+    }
+    .reply-content {
+        margin: 6px 0;
     }
 }
 
@@ -134,7 +140,7 @@ body {
 }
 
 /* Topic Show Page */
-@import "topic_body"
+@import "topic_body";
 .topics-show-page {
     .panel {
         padding: 15px;
@@ -144,6 +150,22 @@ body {
             font-size: 28px;
             line-hegiht: 38px;
         }
+    }
+}
+
+/* Replies Show Page */
+.topic-reply {
+    hr {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    a {
+        color: inherit;
+    }
+    .meta {
+        font-size: .9em;
+        color: #b3b3b3;
     }
 }
 

@@ -20,6 +20,15 @@ class User extends Authenticatable
     ];
 
     /**
+     * 一个 user(用户) 可以有多条 replies(评论)
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
+
+    /**
      * The attributes that should be hidden for arrays.
      *
      * @var array

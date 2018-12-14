@@ -11,6 +11,8 @@ class User extends Authenticatable
 {
     use HasRoles;
 
+    use Traits\ActiveUserHelper;
+
     public function markAsRead()
     {
         $this->notification_count = 0;

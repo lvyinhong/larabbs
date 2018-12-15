@@ -11,7 +11,11 @@ class User extends Authenticatable
 {
     use HasRoles;
 
+    # 活跃用户统计
     use Traits\ActiveUserHelper;
+
+    # 最后登陆时间
+    use Traits\LastActivedAtHelper;
 
     public function markAsRead()
     {
